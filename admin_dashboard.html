@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Okot Family</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 15px;">
+                    <img src="images/logo.png" alt="Okot Heritage Logo" style="height: 60px; width: auto; border-radius: 8px; background: white; padding: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                    <div>
+                        <h1 style="margin-bottom: 0;">Okot Family</h1>
+                        <div class="tagline" style="margin-top: 2px;">Preserving Our Roots</div>
+                    </div>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="genealogy.html">Genealogy</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn-primary" style="padding: 0.3rem 1rem;">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.main-nav a');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Admin Dashboard</h1>
+            <p>Admin tools are disabled in the static site.</p>
+        </div>
+    </section>
+
+    <section class="admin-section" style="padding: 60px 0; text-align: center;">
+        <div class="container" style="max-width: 680px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                <p>The database and server-side administration features have been removed.</p>
+                <p>If you need to manage family content, please use the contact page to reach the site maintainers.</p>
+                <a href="contact.html" class="btn-primary">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer" style="background: #2d241e; color: #fff; padding: 40px 0; margin-top: 50px;">
+        <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div class="footer-info">
+                <h3>Okot Family Heritage</h3>
+                <p>Preserving our history for the generations to come.</p>
+                <p>&copy; 2026 Okot Family Association. All rights reserved.</p>
+            </div>
+            <div class="footer-links" style="display:flex; gap: 40px;">
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
+                        <li><a href="history.html" style="color: #ccc; text-decoration: none;">History</a></li>
+                        <li><a href="gallery.html" style="color: #ccc; text-decoration: none;">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><a href="contact.html" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
+                        <li><a href="login.html" style="color: #ccc; text-decoration: none;">Admin Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

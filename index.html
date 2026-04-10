@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Okot Family Heritage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 15px;">
+                    <img src="images/logo.png" alt="Okot Heritage Logo" style="height: 60px; width: auto; border-radius: 8px; background: white; padding: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                    <div>
+                        <h1 style="margin-bottom: 0;">Okot Family</h1>
+                        <div class="tagline" style="margin-top: 2px;">Preserving Our Roots</div>
+                    </div>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="genealogy.html">Genealogy</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn-primary" style="padding: 0.3rem 1rem;">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.main-nav a');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Okot Family <span class="highlight">Legacy</span></h1>
+                <p>Preserving Our Roots, Celebrating Our Heritage, Inspiring Future Generations</p>
+                <div class="hero-buttons">
+                    <a href="history.html" class="btn-primary">Explore Our History</a>
+                    <a href="genealogy.html" class="btn-secondary">Discover Family Tree</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="welcome-section">
+        <div class="container">
+            <div class="welcome-content">
+                <div class="welcome-text">
+                    <h2>Welcome to the Okot Family Website</h2>
+                    <p>The Okot family traces its roots deep within the rich cultural heritage of Northern Uganda. For generations, we have stood together as a pillar of strength, unity, and tradition.</p>
+                    <p>This website serves as a digital gathering place for all Okot family members worldwide — a place to share our stories, preserve our history, and strengthen the bonds that unite us.</p>
+                    <div class="family-motto">
+                        <h3>Our Family Motto:</h3>
+                        <p>"<em>Unity is Strength, Together We Thrive</em>"</p>
+                    </div>
+                </div>
+                <div class="welcome-image" style="height: 100%; display: flex; align-items: stretch;">
+                    <div class="image-card" style="padding: 0; overflow: hidden; width: 100%; height: 100%; position: relative; min-height: 350px; background: transparent;">
+                        <img src="images/ancestral_home.jpg" alt="Ancestral Home - Okot Village" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(transparent, rgba(60,30,10,0.9)); padding: 2rem 1rem 1rem; color: white; text-align: center;">
+                            <p style="margin: 0; font-weight: 600; font-size: 1.2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">Ancestral Home - Okot Village</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-facts">
+        <div class="container">
+            <h2>Family at a Glance</h2>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <div class="fact-number">1800s</div>
+                    <p>Family Origins</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number">5+</div>
+                    <p>Generations</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number">200+</div>
+                    <p>Family Members</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number">3</div>
+                    <p>Continents</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="family-values">
+        <div class="container">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon"></div>
+                    <h3>Unity</h3>
+                    <p>Standing together as one family, supporting each other through life's journey</p>
+                    <img src="images/unity_group.jpg" alt="Preserving Unity" style="width: 100%; aspect-ratio: 1200/630; height: auto; object-fit: cover; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"></div>
+                    <h3>Heritage</h3>
+                    <p>Preserving our traditions, language, and cultural practices for future generations</p>
+                    <img src="images/heritage_dance.jpg" alt="Preserving Heritage" style="width: 100%; aspect-ratio: 1200/630; height: auto; object-fit: cover; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"></div>
+                    <h3>Respect</h3>
+                    <p>Honoring our elders, valuing each family member, and treating all with dignity</p>
+                    <img src="images/respect_elders.jpg" alt="Respect for Elders" style="width: 100%; aspect-ratio: 1200/630; height: auto; object-fit: cover; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"></div>
+                    <h3>Community</h3>
+                    <p>Serving our local and global communities while staying connected to our roots</p>
+                    <img src="images/community_aerial.png" alt="Community Overview" style="width: 100%; aspect-ratio: 1200/630; height: auto; object-fit: cover; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="latest-news" class="latest-news">
+        <div class="container">
+            <div class="news-header">
+                <h2>Latest Family News</h2>
+                <p>Stay updated with the latest happenings in our family</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-category category-events">Reunion</div>
+                    <span class="news-date">Mar 12, 2026</span>
+                    <h3>Family Reunion 2026 Announced</h3>
+                    <p>Okot family members from around the world are invited to join the jubilee reunion in Gulu.</p>
+                    <div class="news-footer">
+                        <span class="news-author">By Wilfred Okot</span>
+                        <a href="news_detail.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-category category-history">Heritage</div>
+                    <span class="news-date">Feb 08, 2026</span>
+                    <h3>New Family History Archive</h3>
+                    <p>We launched a new digital archive preserving elder stories and traditional songs.</p>
+                    <div class="news-footer">
+                        <span class="news-author">By Grace Akello</span>
+                        <a href="news_detail.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-category category-culture">Culture</div>
+                    <span class="news-date">Jan 15, 2026</span>
+                    <h3>Traditional Dance Workshop</h3>
+                    <p>Join our community workshop celebrating the music and dance of the Acholi people.</p>
+                    <div class="news-footer">
+                        <span class="news-author">By Michael Okot</span>
+                        <a href="news_detail.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer" style="background: #2d241e; color: #fff; padding: 40px 0; margin-top: 50px;">
+        <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div class="footer-info">
+                <h3>Okot Family Heritage</h3>
+                <p>Preserving our history for the generations to come.</p>
+                <p>&copy; 2026 Okot Family Association. All rights reserved.</p>
+            </div>
+            <div class="footer-links" style="display:flex; gap: 40px;">
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
+                        <li><a href="history.html" style="color: #ccc; text-decoration: none;">History</a></li>
+                        <li><a href="gallery.html" style="color: #ccc; text-decoration: none;">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><a href="contact.html" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
+                        <li><a href="login.html" style="color: #ccc; text-decoration: none;">Admin Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

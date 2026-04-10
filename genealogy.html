@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okot Family Genealogy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 15px;">
+                    <img src="images/logo.png" alt="Okot Heritage Logo" style="height: 60px; width: auto; border-radius: 8px; background: white; padding: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                    <div>
+                        <h1 style="margin-bottom: 0;">Okot Family</h1>
+                        <div class="tagline" style="margin-top: 2px;">Preserving Our Roots</div>
+                    </div>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="genealogy.html">Genealogy</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn-primary" style="padding: 0.3rem 1rem;">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.main-nav a');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Family Tree & Genealogy</h1>
+            <p>Mapping Our Ancestral Connections</p>
+        </div>
+    </section>
+
+    <section class="genealogy-intro">
+        <div class="container" style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+            <div class="intro-box" style="flex: 1; min-width: 300px;">
+                <h2>Our Family Tree</h2>
+                <p>Below is a representation of the Okot family lineage originating from the heartlands of Acholi. We continue to research and update our genealogy as we discover more about our ancestors and connect with distant relatives.</p>
+                <p class="note"> <strong>Note:</strong> This is a simplified version. Contact the family historian for detailed records.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="images/acholi_map.png" alt="Map of Acholiland" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); border: 4px solid white;">
+            </div>
+        </div>
+    </section>
+
+    <section class="family-tree">
+        <div class="container">
+            <div class="tree-container">
+                <div class="tree-generation gen-1">
+                    <h3>Generation 1: The Patriarch</h3>
+                    <div class="tree-nodes">
+                        <div class="tree-node root">
+                            <div class="person-card">
+                                <img src="images/chief_okot.jpg" alt="Chief Okot Oloo" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto 15px; display: block; border: 3px solid #D2691E; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                                <h4>Chief Okot Oloo</h4>
+                                <p>1840 - 1920</p>
+                                <p class="person-title">Founder of Okot Village</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tree-generation gen-2">
+                    <h3>Generation 2: Children</h3>
+                    <div class="tree-nodes">
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>Okot Olum</h4>
+                                <p>1865 - 1945</p>
+                                <p>First Son</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>Okot Lanyero</h4>
+                                <p>1870 - 1950</p>
+                                <p>Second Son</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>Aciro Okot</h4>
+                                <p>1875 - 1960</p>
+                                <p>First Daughter</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tree-generation gen-3">
+                    <h3>Generation 3: Grandchildren</h3>
+                    <div class="tree-nodes">
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>Johnson Okot</h4>
+                                <p>1895 - 1975</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>Peter Okot</h4>
+                                <p>1900 - 1980</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>Grace Okot</h4>
+                                <p>1905 - 1990</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>Mary Okot</h4>
+                                <p>1910 - 1995</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tree-generation gen-4">
+                    <h3>Generation 4: Great-Grandchildren</h3>
+                    <div class="tree-nodes">
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>James Okot</h4>
+                                <p>1930 - Present</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>William Okot</h4>
+                                <p>1935 - 2015</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>Sarah Okot</h4>
+                                <p>1940 - Present</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>David Okot</h4>
+                                <p>1945 - Present</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tree-generation gen-5">
+                    <h3>Generation 5: Present Generation</h3>
+                    <div class="tree-nodes">
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>Michael Okot</h4>
+                                <p>1970 - Present</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>Elizabeth Okot</h4>
+                                <p>1975 - Present</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>Robert Okot</h4>
+                                <p>1980 - Present</p>
+                            </div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="person-card">
+                                <div class="person-icon"></div>
+                                <h4>Catherine Okot</h4>
+                                <p>1985 - Present</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="family-database">
+        <div class="container">
+            <h2>Family Members Database</h2>
+            <div class="database-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birth Year</th>
+                            <th>Location</th>
+                            <th>Generation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Chief Okot Oloo</td><td>1840</td><td>Gulu, Uganda</td><td>1st</td></tr>
+                        <tr><td>Okot Olum</td><td>1865</td><td>Gulu, Uganda</td><td>2nd</td></tr>
+                        <tr><td>Johnson Okot</td><td>1895</td><td>Kampala, Uganda</td><td>3rd</td></tr>
+                        <tr><td>James Okot</td><td>1930</td><td>London, UK</td><td>4th</td></tr>
+                        <tr><td>Michael Okot</td><td>1970</td><td>Nairobi, Kenya</td><td>5th</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="contribute-note">
+                <p> <strong>Help us grow our family tree!</strong> If you have information about family members not listed, please <a href="contact.html">contact us</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer" style="background: #2d241e; color: #fff; padding: 40px 0; margin-top: 50px;">
+        <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div class="footer-info">
+                <h3>Okot Family Heritage</h3>
+                <p>Preserving our history for the generations to come.</p>
+                <p>&copy; 2026 Okot Family Association. All rights reserved.</p>
+            </div>
+            <div class="footer-links" style="display:flex; gap: 40px;">
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
+                        <li><a href="history.html" style="color: #ccc; text-decoration: none;">History</a></li>
+                        <li><a href="gallery.html" style="color: #ccc; text-decoration: none;">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><a href="contact.html" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
+                        <li><a href="login.html" style="color: #ccc; text-decoration: none;">Admin Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
